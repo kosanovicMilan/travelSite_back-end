@@ -10,6 +10,6 @@ public class HelloResource {
     @Produces("text/plain")
     public String hello() {
         System.out.println("stigaoo");
-        return "Hello, World!";
+        return "Cao cao proba";
     }
 }
