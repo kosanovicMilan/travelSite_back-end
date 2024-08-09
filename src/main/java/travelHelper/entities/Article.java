@@ -2,6 +2,7 @@ package travelHelper.entities;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.w3c.dom.ls.LSOutput;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
