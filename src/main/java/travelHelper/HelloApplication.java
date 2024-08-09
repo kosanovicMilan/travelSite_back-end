@@ -1,4 +1,4 @@
-package com.example.domacirest;
+package travelHelper;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
