@@ -32,15 +32,20 @@ public class User {
     @NotEmpty(message = "Users email is required!")
     private String email;
 
+    @NotNull(message = "Users status is required!")
+    @NotEmpty(message = "Users status is required!")
+    private String status;
+
     public User() {
     }
 
-    public User(int user_id, String name, String surrname, String type, String password, String email) {
+    public User(int user_id, String name, String surrname, String type, String password, String email,String status) {
         this.user_id = user_id;
         this.name = name;
         this.surrname = surrname;
         this.type = type;
         this.password = password;
         this.email = email;
+        this.status = status;
     }
 }

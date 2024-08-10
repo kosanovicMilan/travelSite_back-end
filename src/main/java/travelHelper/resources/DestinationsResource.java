@@ -23,5 +23,4 @@ public class DestinationsResource {
         return this.destinationsService.getAllDestinations();
     }
 
-
 }

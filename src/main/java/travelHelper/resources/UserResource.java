@@ -1,4 +1,4 @@
 package travelHelper.resources;
 
-public class EditUserListService {
+public class UserResource {
 }

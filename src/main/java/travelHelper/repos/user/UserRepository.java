@@ -9,4 +9,5 @@ public interface UserRepository {
     public List<User> getAllUsers();
     public void deleteUser(int user_id);
     public User addUser(User user);
+    public User findByEmail(String email);
 }
