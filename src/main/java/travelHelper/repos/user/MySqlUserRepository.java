@@ -172,7 +172,7 @@ public class MySqlUserRepository extends SQL_AbstractRepo implements UserReposit
                 String type = resultSet.getString("type");
                 String password = resultSet.getString("password");
                 String status = resultSet.getString("status");
-
+                System.out.println("Ovo je u mysqluserRepo pass: " + password);
                 user = new User(id, name, surrname, type, password, email,status);
             }
 

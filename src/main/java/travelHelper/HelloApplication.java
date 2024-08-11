@@ -6,7 +6,10 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 import travelHelper.repos.destination.DestinationRepository;
 import travelHelper.repos.destination.MySqlDestinationRepository;
+import travelHelper.repos.user.MySqlUserRepository;
+import travelHelper.repos.user.UserRepository;
 import travelHelper.services.DestinationsService;
+import travelHelper.services.UserService;
 
 import javax.inject.Singleton;
 import javax.ws.rs.ApplicationPath;
@@ -43,8 +46,12 @@ public class HelloApplication extends ResourceConfig {
                 this.bind(MySqlDestinationRepository.class)
                         .to(DestinationRepository.class)
                         .in(Singleton.class);
+                this.bind(MySqlUserRepository.class)
+                        .to(UserRepository.class)
+                        .in(Singleton.class);
 
                 this.bindAsContract(DestinationsService.class);
+                this.bindAsContract(UserService.class);
             }
         };
         register(binder);
