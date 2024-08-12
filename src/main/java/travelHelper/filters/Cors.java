@@ -1,4 +1,4 @@
-package travelHelper.filter;
+package travelHelper.filters;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;

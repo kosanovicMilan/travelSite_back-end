@@ -30,11 +30,11 @@ public class Comment {
     public Comment() {
     }
 
-    public Comment(int comment_id, String text, String writer, int article_id, Date created_on) {
+    public Comment(int comment_id, String text, String writer,Date created_on,int article_id) {
         this.comment_id = comment_id;
         this.text = text;
         this.writer = writer;
-        this.article_id = article_id;
         this.created_on = created_on;
+        this.article_id = article_id;
     }
 }

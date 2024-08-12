@@ -9,6 +9,7 @@ public abstract class SQL_AbstractRepo {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
+            System.out.println("Driver not found!!");
             e.printStackTrace();
         }
     }
@@ -43,6 +44,7 @@ public abstract class SQL_AbstractRepo {
         try {
             Optional.of(statement).get().close();
         } catch (SQLException throwables) {
+            System.out.println("Error closing statement");
             throwables.printStackTrace();
         }
     }
@@ -51,6 +53,7 @@ public abstract class SQL_AbstractRepo {
         try {
             Optional.of(resultSet).get().close();
         } catch (SQLException throwables) {
+            System.out.println("Error closing resultset");
             throwables.printStackTrace();
         }
     }
@@ -59,6 +62,7 @@ public abstract class SQL_AbstractRepo {
         try {
             Optional.of(connection).get().close();
         } catch (SQLException throwables) {
+            System.out.println("Error closing connection");
             throwables.printStackTrace();
         }
     }

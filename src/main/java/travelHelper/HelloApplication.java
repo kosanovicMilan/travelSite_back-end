@@ -4,12 +4,17 @@ package travelHelper;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
+import travelHelper.repos.activity.ActivityRepository;
+import travelHelper.repos.activity.MySqlActivityRepository;
+import travelHelper.repos.article.ArticleRepository;
+import travelHelper.repos.article.MySqlArticleRepository;
+import travelHelper.repos.comment.CommentRepository;
+import travelHelper.repos.comment.MySqlCommentRepository;
 import travelHelper.repos.destination.DestinationRepository;
 import travelHelper.repos.destination.MySqlDestinationRepository;
 import travelHelper.repos.user.MySqlUserRepository;
 import travelHelper.repos.user.UserRepository;
-import travelHelper.services.DestinationsService;
-import travelHelper.services.UserService;
+import travelHelper.services.*;
 
 import javax.inject.Singleton;
 import javax.ws.rs.ApplicationPath;
@@ -43,15 +48,36 @@ public class HelloApplication extends ResourceConfig {
 
             @Override
             protected void configure() {
-                this.bind(MySqlDestinationRepository.class)
-                        .to(DestinationRepository.class)
-                        .in(Singleton.class);
+
                 this.bind(MySqlUserRepository.class)
                         .to(UserRepository.class)
                         .in(Singleton.class);
 
-                this.bindAsContract(DestinationsService.class);
                 this.bindAsContract(UserService.class);
+
+                this.bind(MySqlDestinationRepository.class)
+                        .to(DestinationRepository.class)
+                        .in(Singleton.class);
+
+                this.bindAsContract(DestinationsService.class);
+
+                this.bind(MySqlActivityRepository.class)
+                        .to(ActivityRepository.class)
+                        .in(Singleton.class);
+
+                this.bindAsContract(ActivityService.class);
+
+                this.bind(MySqlArticleRepository.class)
+                        .to(ArticleRepository.class)
+                        .in(Singleton.class);
+
+                this.bindAsContract(ArticleService.class);
+
+                this.bind(MySqlCommentRepository.class)
+                        .to(CommentRepository.class)
+                        .in(Singleton.class);
+
+                this.bindAsContract(CommentService.class);
             }
         };
         register(binder);
