@@ -58,7 +58,7 @@ public class UserService {
         User user = userRepository.findByEmail(email);
 
 
-        if(user == null || !status.equals("active")){
+        if(user == null){
             return false;
         }
 
@@ -69,7 +69,7 @@ public class UserService {
 
         if(type.equals("admin")) {
             return true; //admin ima prava za sve!
-        }else if (type.equals("user") && route.contains("editUsers")){
+        }else if (type.equals("user") && route.contains("destinations")){
             return false;
         }else if(type.equals("user")){
             return true;
