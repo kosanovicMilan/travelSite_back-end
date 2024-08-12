@@ -19,6 +19,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
@@ -34,11 +40,6 @@
             <artifactId>jersey-media-json-jackson</artifactId>
             <version>2.34</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.glassfish.jersey.ext.cdi</groupId>-->
-<!--            <artifactId>jersey-cdi1x</artifactId>-->
-<!--            <version>3.1.8</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
@@ -72,17 +73,6 @@
             <version>1.18.34</version>
             <scope>provided</scope>
         </dependency>
-        <!-- HK2 Utilities -->
-<!--        <dependency>-->
-<!--            <groupId>org.glassfish.hk2</groupId>-->
-<!--            <artifactId>hk2-api</artifactId>-->
-<!--            <version>3.0.0</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.glassfish.hk2</groupId>-->
-<!--            <artifactId>hk2-utils</artifactId>-->
-<!--            <version>3.0.0</version>-->
-<!--        </dependency>-->
 
 
     </dependencies>

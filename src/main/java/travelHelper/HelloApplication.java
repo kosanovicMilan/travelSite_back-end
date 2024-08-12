@@ -53,30 +53,27 @@ public class HelloApplication extends ResourceConfig {
                         .to(UserRepository.class)
                         .in(Singleton.class);
 
-                this.bindAsContract(UserService.class);
-
                 this.bind(MySqlDestinationRepository.class)
                         .to(DestinationRepository.class)
                         .in(Singleton.class);
-
-                this.bindAsContract(DestinationsService.class);
 
                 this.bind(MySqlActivityRepository.class)
                         .to(ActivityRepository.class)
                         .in(Singleton.class);
 
-                this.bindAsContract(ActivityService.class);
-
                 this.bind(MySqlArticleRepository.class)
                         .to(ArticleRepository.class)
                         .in(Singleton.class);
-
-                this.bindAsContract(ArticleService.class);
 
                 this.bind(MySqlCommentRepository.class)
                         .to(CommentRepository.class)
                         .in(Singleton.class);
 
+
+                this.bindAsContract(UserService.class);
+                this.bindAsContract(DestinationsService.class);
+                this.bindAsContract(ArticleService.class);
+                this.bindAsContract(ActivityService.class);
                 this.bindAsContract(CommentService.class);
             }
         };
